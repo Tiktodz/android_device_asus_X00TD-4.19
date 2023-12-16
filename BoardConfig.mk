@@ -25,5 +25,8 @@ TARGET_KERNEL_CONFIG := asus/X00TD_defconfig
 # Power
 TARGET_TAP_TO_WAKE_NODE := "/sys/kernel/touchpanel/dclicknode"
 
+# Releasetools
+TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
+
 # Inherit the proprietary files
 include vendor/asus/X00TD/BoardConfigVendor.mk
