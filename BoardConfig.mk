@@ -28,5 +28,8 @@ TARGET_TAP_TO_WAKE_NODE := "/sys/kernel/touchpanel/dclicknode"
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
+# Sepolicy
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+
 # Inherit the proprietary files
 include vendor/asus/X00TD/BoardConfigVendor.mk
