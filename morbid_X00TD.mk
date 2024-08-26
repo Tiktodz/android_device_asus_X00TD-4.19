@@ -8,19 +8,21 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common LineageOS stuff
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
-CUSTOM_MAINTAINER := ew™
+# Inherit some common Morbid stuff
+$(call inherit-product, vendor/morbid/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_SUPPORTS_BLUR := true
 TARGET_GAPPS_ARCH := arm64
-IS_PHONE := true
+TARGET_USES_BLUR_RECENT := false
+TARGET_FACE_UNLOCK_SUPPORTED := true
+USE_PIXEL_CHARGER := true
+TARGET_SUPPORTS_QUICK_TAP  := true
+TARGET_SUPPORTS_GOOGLE_BATTERY := false
 
 # Inherit from X00TD device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := aosp_X00TD
+PRODUCT_NAME := morbid_X00TD
 PRODUCT_DEVICE := X00TD
 PRODUCT_BRAND := asus
 PRODUCT_MODEL := Zenfone Max Pro M1
